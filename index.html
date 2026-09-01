@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>كاشف رسائل التصيد الاحتيالي | Phishing Email Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🛡️ كاشف رسائل التصيد الاحتيالي</h1>
+      <p class="subtitle">أداة تعليمية للكشف عن رسائل البريد الإلكتروني المشبوهة باستخدام تعلم الآلة</p>
+    </header>
+
+    <main>
+      <label for="emailText" class="input-label">الصق نص الرسالة أو البريد الإلكتروني هنا:</label>
+      <textarea
+        id="emailText"
+        placeholder="مثال: Dear Customer, your account has been suspended. Click here to verify your identity..."
+        rows="10"
+      ></textarea>
+
+      <button id="checkBtn">🔍 تحقق (Check)</button>
+
+      <div id="resultBox" class="result-box hidden">
+        <div id="resultIcon" class="result-icon"></div>
+        <div id="resultText" class="result-text"></div>
+        <div id="confidenceText" class="confidence-text"></div>
+      </div>
+
+      <div id="errorBox" class="error-box hidden"></div>
+    </main>
+
+    <footer>
+      <p>⚠️ مشروع تعليمي فقط — النتائج تعتمد على حجم وجودة بيانات التدريب ولا يجب الاعتماد عليها كحل أمني نهائي.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

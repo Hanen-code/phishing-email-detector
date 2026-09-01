@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9edf5 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  font-size: 26px;
+  color: #1f2937;
+}
+
+.subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+button#checkBtn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button#checkBtn:hover {
+  background: #4338ca;
+}
+
+button#checkBtn:active {
+  transform: scale(0.98);
+}
+
+button#checkBtn:disabled {
+  background: #a5a6f5;
+  cursor: not-allowed;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.result-box.phishing {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+}
+
+.result-box.legitimate {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+}
+
+.result-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.result-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.confidence-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.error-box {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+  text-align: center;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
